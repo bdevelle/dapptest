@@ -41,8 +41,9 @@ function startMainWindow() {
 		'title':  'Sia-UI-beta',
 	});
 
-	// Set User Agent
-	mainWindow.webContents.setUserAgent('Sia-Agent');
+	// Set User Agent - 'siad' only responds to browsers that have the
+	// substring "Sia-Agent" in them.
+	mainWindow.webContents.setUserAgent('Sia-Agent - Sia-UI-Beta');
 
 	// Load the index.html of the app.
 	mainWindow.loadUrl('file://' + __dirname + '/index.html');
